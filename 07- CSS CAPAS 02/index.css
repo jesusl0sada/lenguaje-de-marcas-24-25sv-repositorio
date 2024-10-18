@@ -2,15 +2,48 @@
     /* 1º)NOMBRE DEL ELEMENTO*/
     /* 2º)APERTURA/ CIERRE DE LLAVES*/
     /* 3º)PROPIEDADES A TUTIPLÉN!!!!!*/
-#title1{
-    background-color:#2a06c9;
-    display: inline-block;
+#title{
+    background-color: beige;
 }
-#title2{
-    background-color:#6cc915;
+#description{
+    background-color: yellow;
     display: inline-block;
+    border: 5px black solid; 
+    border-style: solid;
+    padding-top: 10px;
+    padding: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 45%; 
+    display: block;
+    margin-right: 45%
 }
-#title3{
-    background-color:#b91b35;
-    display: inline-block;
+#card{
+border: 1px black solid;
+display: inline-block;
+margin-left: 45%;
+margin-right: 45%;
+padding: 20px
+}
+#AF1{
+    width: 250px;
+    height: 250px;
+}
+.border_box{
+   border: 0.5px black solid 
+}
+#desc1{
+color: aqua;    
+}
+#desc2{
+color: red
+}
+#desc3{
+color: green
+}
+#zapastn{
+    width: 400px;
+    height: 400px;
+    border-image: 5px
+    border-color:black;
 }
