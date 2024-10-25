@@ -1,0 +1,11 @@
+#container p{
+    color:azure;
+}
+#container{
+background-color: aqua;
+}
+body{
+background-image: url('../img/gatete.jpg');
+background-repeat:no-repeat;
+background-size:cover;
+}
