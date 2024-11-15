@@ -8,84 +8,101 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  
-  <!-- BARRA LATERAL DERECHA -->
-<aside class="barra-lateral">
-  <div class="logo-lateral">
-    <img src="logo-pequeño.png" alt="Logo Losada Parfums">
-  </div>
-  <nav class="menu-lateral">
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-      <li><a href="#sobrenosotros">Sobre Nosotros</a></li>
-      <li><a href="#perfumes-para-el">Perfumes Para Él</a></li>
-      <li><a href="#perfumes-para-ella">Perfumes Para Ella</a></li>
-    </ul>
-  </nav>
-</aside>
 
-<!-- Icono de hamburguesa -->
-<div class="icono-hamburguesa">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+  <!-- Checkbox para activar el menú lateral -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  
+  <!-- Etiqueta para el icono de hamburguesa -->
+  <label for="menu-toggle" class="icono-hamburguesa">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <!-- BARRA LATERAL DERECHA -->
+  <aside class="barra-lateral">
+    <div class="logo-lateral">
+      <img src="logoperfumeslosada.png" alt="Logo Losada Parfums">
+    </div>
+    <nav class="menu-lateral">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#sobrenosotros">Sobre Nosotros</a></li>
+        <li><a href="#perfumes-para-el">Perfumes Para Él</a></li>
+        <li><a href="#perfumes-para-ella">Perfumes Para Ella</a></li>
+      </ul>
+    </nav>
+  </aside>
 
   <!-- SECCIÓN PRINCIPAL -->
-  <main class="inicio">
-    <h1>Losada Parfums</h1>
+  <main class="inicio" id="inicio">
+    <!-- Título decorativo con logo en el centro -->
+    <div class="titulo-decorado">
+      <span class="linea-decorativa"></span>
+      <h1 class="titulo-animado">
+        Losada 
+        <span class="logo-en-texto">
+          <img src="logoperfumeslosada.png" alt="Logo Losada Parfums">
+        </span>
+        Parfums
+      </h1>
+      <span class="linea-decorativa"></span>
+    </div>
 
-    <!-- Contenedor del Eslogan con Decoración -->
+    <!-- Eslogan con líneas decorativas sutiles -->
     <div class="slogan-container">
+      <div class="slogan-line"></div>
       <p class="slogan">Descubre tu esencia única</p>
+      <div class="slogan-line"></div>
+      <div class="decorative-line"></div>
     </div>
 
-   <!-- Botones de sección con iconos -->
-<div class="botones-inicio">
-  <div class="boton-wrapper">
-    <a href="#sobrenosotros" class="boton">Sobre Nosotros</a>
-    <div class="icono">
-      <img src="icono-sobre-nosotros.png" alt="Icono Sobre Nosotros">
+    <!-- Botones de sección con iconos -->
+    <div class="botones-inicio">
+      <div class="boton-wrapper">
+        <a href="#sobrenosotros" class="boton">Sobre Nosotros</a>
+        <div class="icono">
+          <img src="icono-sobre-nosotros.png" alt="Icono Sobre Nosotros">
+        </div>
+      </div>
+      <div class="boton-wrapper">
+        <a href="#contacto" class="boton">Contacto</a>
+        <div class="icono">
+          <img src="icono-contacto.png" alt="Icono Contacto">
+        </div>
+      </div>
+      <div class="boton-wrapper">
+        <a href="#perfumes-para-el" class="boton">Perfumes Para Él</a>
+        <div class="icono">
+          <img src="icono-perfumes-para-el.png" alt="Icono Perfumes Para Él">
+        </div>
+      </div>
+      <div class="boton-wrapper">
+        <a href="#perfumes-para-ella" class="boton">Perfumes Para Ella</a>
+        <div class="icono">
+          <img src="icono-perfumes-para-ella.png" alt="Icono Perfumes Para Ella">
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="boton-wrapper">
-    <a href="#contacto" class="boton">Contacto</a>
-    <div class="icono">
-      <img src="icono-contacto.png" alt="Icono Contacto">
-    </div>
-  </div>
-  <div class="boton-wrapper">
-    <a href="#perfumes-para-el" class="boton">Perfumes Para Él</a>
-    <div class="icono">
-      <img src="icono-perfumes-para-el.png" alt="Icono Perfumes Para Él">
-    </div>
-  </div>
-  <div class="boton-wrapper">
-    <a href="#perfumes-para-ella" class="boton">Perfumes Para Ella</a>
-    <div class="icono">
-      <img src="icono-perfumes-para-ella.png" alt="Icono Perfumes Para Ella">
-    </div>
-  </div>
-</div>
 
     <!-- Carrusel de Imágenes -->
     <div class="carousel-frame">
       <div class="carousel">
         <div class="carousel-slide">
-          <img src="imagen1.jpg" alt="Producto 1">
+          <img src="prueba1.jpg" alt="Producto 1">
           <div class="carousel-text">Fragancia Exclusiva</div>
         </div>
         <div class="carousel-slide">
-          <img src="imagen2.jpg" alt="Producto 2">
+          <img src="prueba2.jpg" alt="Producto 2">
           <div class="carousel-text">Elegancia en Cada Detalle</div>
         </div>
         <div class="carousel-slide">
-          <img src="imagen3.jpg" alt="Producto 3">
+          <img src="prueba3.jpg" alt="Producto 3">
           <div class="carousel-text">Esencias Naturales</div>
         </div>
         <div class="carousel-slide">
-          <img src="imagen4.jpg" alt="Producto 4">
+          <img src="prueba4.jpg" alt="Producto 4">
           <div class="carousel-text">Sofisticación Atemporal</div>
         </div>
       </div>
