@@ -6,6 +6,17 @@
   font-family: 'Roboto', sans-serif;
 }
 
+/* Fondo de la página */
+body {
+  background-image: url('fondolosadaparfums.png');
+  background-color: #001f3f; /* Azul marino oscuro */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: multiply; /* Mezcla el color con la imagen */
+  color: white;
+}
+
 /* HEADER */
 .header {
   background-color: #1b1f24;  
@@ -49,22 +60,7 @@
 /* SECCIÓN INICIO */
 .inicio {
   text-align: center;
-  padding: 150px 20px 80px; /* Aumento de padding inferior para espacio del carrusel */
-  background-color: #001f3f;
-  min-height: 100vh;
-  position: relative;
-  color: white;
-}
-
-.background-logo img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.05;
-  object-fit: cover;
-  z-index: -1; /* Asegura que el fondo esté detrás de los elementos */
+  padding: 150px 20px 0; /* Elimina el padding inferior */
 }
 
 .inicio h1 {
@@ -80,10 +76,9 @@
 
 .slogan-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 15px;
-  position: relative;
+  margin-bottom: 40px;
 }
 
 .slogan {
@@ -92,17 +87,21 @@
   color: #FFD700;
   font-style: italic;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  position: relative;
   padding: 15px 0;
+  position: relative;
 }
 
 .slogan::after {
   content: "";
-  display: block;
-  width: 150px;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #FFD700, transparent);
-  margin: 12px auto 0;
+  position: absolute;
+  bottom: -10px; /* Ajusta la distancia debajo del texto */
+  left: 50%;
+  transform: translateX(-50%); /* Centra la línea */
+  width: 80%; /* Ajusta el ancho según necesites */
+  max-width: 300px; /* Limita el tamaño máximo */
+  height: 4px;
+  background: linear-gradient(to right, transparent, #FFD700 50%, transparent);
+  border-radius: 2px;
 }
 
 /* Botones de inicio */
@@ -110,13 +109,11 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  z-index: 1;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .boton-wrapper {
   text-align: center;
-  position: relative;
 }
 
 .boton {
@@ -143,19 +140,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
-  margin-top: 60px; /* Separación del carrusel con los botones */
+  padding: 15px 0; /* Elimina padding adicional */
+  margin-top: 20px; /* Ajusta el margen para evitar la línea */
 }
 
 .carousel {
-  width: 55%; /* Tamaño ajustado */
+  width: 55%;
   max-width: 550px;
   height: 300px;
   overflow: hidden;
   position: relative;
-  border: 5px solid #FFD700; /* Borde amarillo */
+  border: 5px solid #FFD700;
   border-radius: 15px;
-  margin: 0 auto;
+  background-color: transparent;
 }
 
 .carousel-slide {
@@ -188,14 +185,14 @@
 
 /* Animación del carrusel */
 @keyframes slide {
-  0%, 20% { opacity: 1; }
+  0%, 16.67% { opacity: 1; }
   25%, 100% { opacity: 0; }
 }
 
-.carousel-slide:nth-child(1) { animation: slide 20s infinite; }
-.carousel-slide:nth-child(2) { animation: slide 20s infinite 5s; }
-.carousel-slide:nth-child(3) { animation: slide 20s infinite 10s; }
-.carousel-slide:nth-child(4) { animation: slide 20s infinite 15s; }
+.carousel-slide:nth-child(1) { animation: slide 24s infinite; }
+.carousel-slide:nth-child(2) { animation: slide 24s infinite 6s; }
+.carousel-slide:nth-child(3) { animation: slide 24s infinite 12s; }
+.carousel-slide:nth-child(4) { animation: slide 24s infinite 18s; }
 
 /* FOOTER */
 .footer {
@@ -210,3 +207,204 @@
   opacity: 0.85;
 }
 
+/* Estilos para los iconos representativos */
+.iconos-secciones {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.icono {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Hace la imagen circular */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+}
+
+.icono img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen se ajuste dentro del círculo */
+}
+
+/* Ajustes en el contenedor de botones e iconos */
+.botones-inicio {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.boton-wrapper {
+  display: flex;
+  flex-direction: column; /* Alinea el botón y el icono en columna */
+  align-items: center;
+  gap: 10px; /* Espacio entre el botón y el icono */
+}
+
+/* Estilos para los iconos */
+.icono {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.icono img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Barra lateral en el lado derecho */
+.barra-lateral {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: rgba(27, 31, 36, 0.9); /* Fondo oscuro semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+  z-index: 10;
+}
+
+/* Menú lateral */
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.menu-lateral ul li {
+  font-size: 1.2rem;
+}
+
+.menu-lateral ul li a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-lateral ul li a:hover {
+  color: #FFFFFF;
+  transform: scale(1.1);
+}
+
+/* Espaciado para el contenido principal */
+main.inicio {
+  margin-right: 220px; /* Desplaza el contenido para que no se superponga con la barra lateral */
+}
+
+/* Barra lateral compacta */
+.barra-lateral {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px; /* Ancho reducido inicialmente */
+  height: 100vh;
+  background-color: rgba(27, 31, 36, 0.9); /* Fondo oscuro semitransparente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: width 0.3s ease; /* Transición suave para expandir */
+  overflow: hidden;
+  z-index: 10;
+}
+
+.barra-lateral:hover {
+  width: 200px; /* Ancho expandido al pasar el cursor */
+}
+
+/* Logo en la barra lateral */
+.logo-lateral {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  opacity: 0; /* Oculto inicialmente */
+  transition: opacity 0.3s ease;
+  visibility: hidden; /* Oculto cuando la barra está contraída */
+}
+
+.barra-lateral:hover .logo-lateral {
+  opacity: 1; /* Muestra el logo cuando la barra está expandida */
+  visibility: visible;
+}
+
+/* Menú lateral */
+.menu-lateral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacio entre secciones */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.barra-lateral:hover .menu-lateral ul {
+  opacity: 1;
+}
+
+.menu-lateral ul li {
+  font-size: 1rem;
+}
+
+.menu-lateral ul li a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-lateral ul li a:hover {
+  color: #FFFFFF;
+  transform: scale(1.1);
+}
+
+/* Icono de hamburguesa */
+.icono-hamburguesa {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 15;
+}
+
+.icono-hamburguesa span {
+  width: 30px;
+  height: 3px;
+  background-color: #FFD700;
+  transition: transform 0.3s ease;
+}
+
+/* Espaciado para el contenido principal */
+main.inicio {
+  margin-right: 220px; /* Desplaza el contenido para que no se superponga con la barra lateral */
+}
