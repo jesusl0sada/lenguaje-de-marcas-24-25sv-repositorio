@@ -35,60 +35,68 @@
     </nav>
   </aside>
 
+  <!-- SEPARADOR -->
+  <div class="separador"></div>
+
   <!-- SECCIÓN PRINCIPAL -->
   <main class="inicio" id="inicio">
-    <!-- Título decorativo con logo en el centro -->
-    <div class="titulo-decorado">
-      <span class="linea-decorativa"></span>
-      <h1 class="titulo-animado">
-        Losada 
-        <span class="logo-en-texto">
-          <img src="logoperfumeslosada.png" alt="Logo Losada Parfums">
-        </span>
-        Parfums
-      </h1>
-      <span class="linea-decorativa"></span>
-    </div>
+    
 
-    <!-- Eslogan con líneas decorativas sutiles -->
-    <div class="slogan-container">
-      <div class="slogan-line"></div>
-      <p class="slogan">Descubre tu esencia única</p>
-      <div class="slogan-line"></div>
-      <div class="decorative-line"></div>
-    </div>
+  <!-- Título decorativo con animaciones -->
+<div class="titulo-decorado">
+  <span class="linea-decorativa"></span>
+  <h1 class="titulo-animado">
+    Losada 
+    <span class="logo-en-texto">
+      <img src="logoperfumeslosada.png" alt="Logo Losada Parfums">
+    </span>
+    Parfums
+  </h1>
+  <span class="linea-decorativa"></span>
+</div>
+
+<!-- Eslogan con detalles decorativos -->
+<div class="slogan-container">
+  <p class="slogan">Descubre tu esencia única</p>
+  <div class="decorative-line"></div>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
 
     <!-- Botones de sección con iconos -->
     <div class="botones-inicio">
       <div class="boton-wrapper">
-        <a href="#sobrenosotros" class="boton">Sobre Nosotros</a>
-        <div class="icono">
-          <img src="icono-sobre-nosotros.png" alt="Icono Sobre Nosotros">
-        </div>
+        <a href="#sobrenosotros" class="boton">
+          <img src="icono-sobre-nosotros.png" alt="Icono Sobre Nosotros" class="boton-icono">
+          Sobre Nosotros
+        </a>
       </div>
       <div class="boton-wrapper">
-        <a href="#contacto" class="boton">Contacto</a>
-        <div class="icono">
-          <img src="icono-contacto.png" alt="Icono Contacto">
-        </div>
+        <a href="#contacto" class="boton">
+          <img src="icono-contacto.png" alt="Icono Contacto" class="boton-icono">
+          Contacto
+        </a>
       </div>
       <div class="boton-wrapper">
-        <a href="#perfumes-para-el" class="boton">Perfumes Para Él</a>
-        <div class="icono">
-          <img src="icono-perfumes-para-el.png" alt="Icono Perfumes Para Él">
-        </div>
+        <a href="#perfumes-para-el" class="boton">
+          <img src="icono-perfumes-para-el.png" alt="Icono Perfumes Para Él" class="boton-icono">
+          Perfumes Para Él
+        </a>
       </div>
       <div class="boton-wrapper">
-        <a href="#perfumes-para-ella" class="boton">Perfumes Para Ella</a>
-        <div class="icono">
-          <img src="icono-perfumes-para-ella.png" alt="Icono Perfumes Para Ella">
-        </div>
+        <a href="#perfumes-para-ella" class="boton">
+          <img src="icono-perfumes-para-ella.png" alt="Icono Perfumes Para Ella" class="boton-icono">
+          Perfumes Para Ella
+        </a>
       </div>
     </div>
 
     <!-- Carrusel de Imágenes -->
     <div class="carousel-frame">
       <div class="carousel">
+        <!-- Tus slides aquí -->
         <div class="carousel-slide">
           <img src="prueba1.jpg" alt="Producto 1">
           <div class="carousel-text">Fragancia Exclusiva</div>
@@ -105,17 +113,77 @@
           <img src="prueba4.jpg" alt="Producto 4">
           <div class="carousel-text">Sofisticación Atemporal</div>
         </div>
+        <!-- Solo una barra de progreso -->
+        <div class="carousel-progress"></div>
       </div>
     </div>
-  </main>
+    
 
+  <!-- SECCION DESTACADOS -->
+  <section class="destacados">
+    <h2 class="destacados-titulo">Coming soon...</h2>
+    <div class="destacados-grid">
+      <div class="destacado-item">
+        <img src="fragancia1.jpg" alt="Fragancia 1">
+        <p class="nombre-fragancia">Eau de Luxe</p>
+        <p class="descripcion-fragancia">Una mezcla perfecta de elegancia y sofisticación.</p>
+      </div>
+      <div class="destacado-item">
+        <img src="fragancia2.jpg" alt="Fragancia 2">
+        <p class="nombre-fragancia">Sublime Essence</p>
+        <p class="descripcion-fragancia">Notas frescas y vibrantes para momentos inolvidables.</p>
+      </div>
+      <div class="destacado-item">
+        <img src="fragancia3.jpg" alt="Fragancia 3">
+        <p class="nombre-fragancia">Noir Élégance</p>
+        <p class="descripcion-fragancia">Oscura, profunda y absolutamente irresistible.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SECCION TESTIMONIOS -->
+  <section class="testimonios">
+    <h2 class="testimonios-titulo">Lo Que Dicen Nuestros Clientes</h2>
+    <div class="testimonios-slider">
+      <div class="testimonio-item">
+        <p>"La mejor fragancia que he probado. Elegancia pura."</p>
+        <p>- María López</p>
+      </div>
+      <div class="testimonio-item">
+        <p>"Un aroma que deja una impresión inolvidable."</p>
+        <p>- Juan Martínez</p>
+      </div>
+      <div class="testimonio-item">
+        <p>"La calidad de Losada Parfums es simplemente insuperable."</p>
+        <p>- Ana García</p>
+      </div>
+    </div>
+  </section>
+
+<!-- INDICADOR CARRUSEL -->
+  <div class="carousel-indicators">
+    <span data-slide="1" class="active"></span>
+    <span data-slide="2"></span>
+    <span data-slide="3"></span>
+    <span data-slide="4"></span>
+  </div>
+
+<!-- PROGRESO CARRUSEL -->
+  <div class="carousel-progress"></div>
+  
   <!-- FOOTER -->
   <footer class="footer">
     <p>© 2024 Losada Parfums S.A. Todos los derechos reservados.</p>
+    <div class="social-icons">
+      <a href="#"><img src="icon-facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="icon-instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="icon-twitter.png" alt="Twitter"></a>
+    </div>
   </footer>
-
+  
 </body>
 </html>
+
 
 
 
