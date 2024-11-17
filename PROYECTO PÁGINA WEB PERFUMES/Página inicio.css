@@ -359,25 +359,35 @@ main {
 }
 
 .carousel-slide:nth-child(1) {
-  animation: carouselAnimation 16s infinite;
+  animation: carouselAnimation 36s infinite; /* 6 slides x 6s por slide */
 }
 
 .carousel-slide:nth-child(2) {
-  animation: carouselAnimation 16s infinite 4s;
+  animation: carouselAnimation 36s infinite 6s;
 }
 
 .carousel-slide:nth-child(3) {
-  animation: carouselAnimation 16s infinite 8s;
+  animation: carouselAnimation 36s infinite 12s;
 }
 
 .carousel-slide:nth-child(4) {
-  animation: carouselAnimation 16s infinite 12s;
+  animation: carouselAnimation 36s infinite 18s;
 }
 
-@keyframes carouselAnimation {
-  0%, 25% { opacity: 1; }
-  30%, 100% { opacity: 0; }
+.carousel-slide:nth-child(5) {
+  animation: carouselAnimation 36s infinite 24s;
 }
+
+.carousel-slide:nth-child(6) {
+  animation: carouselAnimation 36s infinite 30s;
+}
+
+
+@keyframes carouselAnimation {
+  0%, 16.66% { opacity: 1; }   /* Slide activo */
+  20%, 100% { opacity: 0; }    /* Otros slides */
+}
+
 
 .carousel img {
   width: 100%;
@@ -423,6 +433,7 @@ main {
 /* Progreso Carrusel */
 
 .carousel .carousel-progress {
+  animation: progressBar 36s linear infinite;
   position: absolute;
   bottom: 0;
   left: 0;
