@@ -6,6 +6,12 @@
   font-family: 'Roboto', sans-serif;
 }
 
+/* Desplazamiento suave */
+html {
+  scroll-behavior: smooth; /* Activa el desplazamiento suave */
+}
+
+
 /* Fondo de la página con negro y toques azules */
 body {
   background: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(10, 10, 20, 1)),
@@ -652,33 +658,57 @@ section {
 
 /* Icono de hamburguesa */
 .icono-hamburguesa {
-  position: fixed; /* Posición fija para el icono */
+  position: fixed;
   top: 20px;
   right: 20px;
   cursor: pointer;
-  z-index: 1100; /* Asegura que esté encima de la barra lateral */
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .icono-hamburguesa span {
   display: block;
   width: 30px;
   height: 3px;
-  margin: 6px;
+  margin: 3px;
   background-color: #FFD700;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Animaciones del icono de hamburguesa al activar */
-.menu-toggle:checked + .icono-hamburguesa span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+/* Mantener el icono de hamburguesa estático, sin transformación */
+.menu-toggle:checked ~ .icono-hamburguesa span {
+  transform: none;
+  opacity: 1;
 }
 
-.menu-toggle:checked + .icono-hamburguesa span:nth-child(2) {
-  opacity: 0;
+/* Ajustar la barra lateral */
+.barra-lateral {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: rgba(27, 31, 36, 0.9);
+  transition: right 0.3s ease;
+  padding: 20px 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.menu-toggle:checked + .icono-hamburguesa span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+/* Opciones centradas */
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
 }
 
 /* Ocultar el checkbox */
@@ -947,6 +977,172 @@ section {
   color: white;
   opacity: 0.9;
 }
+
+/* Sección de contacto */
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #1b1f24;
+  color: white;
+}
+
+/* Contenedor principal */
+.contacto-contenedor {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+/* Redes Sociales */
+.social-media {
+  flex: 1;
+  text-align: left;
+}
+
+.social-media h2 {
+  margin-bottom: 20px;
+  font-size: 3em;
+  color: #FFD700;
+}
+
+.social-media a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.7em;
+}
+
+.social-media a img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+}
+
+.social-media a:hover {
+  color: #FFD700;
+}
+
+/* Formulario de Contacto */
+.formulario-contacto {
+  flex: 2;
+}
+
+.formulario-contacto h2 {
+  margin-bottom: 20px;
+  font-size: 3em;
+  color: #FFD700;
+}
+
+.formulario-contacto form div {
+  margin-bottom: 15px;
+}
+
+.formulario-contacto label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.formulario-contacto button {
+  padding: 10px 20px;
+  background-color: #FFD700;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+  background-color: #FFBF00;
+}
+
+/* Información de contacto */
+.info-contacto {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.info-contacto p {
+  margin-bottom: 10px;
+}   
+
+/* Pie de página */
+footer {
+  background-color: #1b1f24;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Estilos para dispositivos pequeños */
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 3.5em;
+  }
+
+  .destacados-titulo {
+    font-size: 2em;
+  }
+
+  .destacado-item {
+    padding: 10px;
+  }
+
+  .destacado-item h3 {
+    font-size: 1.2em;
+  }
+
+  .destacado-item p {
+    font-size: 0.9em;
+  }
+
+  .icono-atributo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icono-atributo img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .atributo h3 {
+    font-size: 1.2em;
+  }
+
+  .atributo p {
+    font-size: 0.9em;
+  }
+
+  .cuadro-seccion {  
+    padding: 20px;
+  }
+
+  .cuadro-seccion h1 {
+    font-size: 2em;
+  }   
+}
+
+
 
 
 
