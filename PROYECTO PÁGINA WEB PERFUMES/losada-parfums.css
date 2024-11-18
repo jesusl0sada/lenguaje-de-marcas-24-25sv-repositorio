@@ -321,6 +321,13 @@ main {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
+.boton:hover {
+  background-color: #ffffff;
+  color: #FFD700;
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.6);
+}
+
 .boton-icono {
   width: 24px;
   height: 24px;
@@ -400,33 +407,9 @@ main {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  color: #FFD700;
+  color: rgb(255, 215, 0);
   font-size: 1.5em;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Indicador carrusel  */
-
-.carousel-indicators {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-}
-
-.carousel-indicators span {
-  width: 10px;
-  height: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.carousel-indicators span.active {
-  background-color: #FFD700;
+  text-shadow: 1px 1px 10px rgb(0, 0, 0);
 }
 
 /* Progreso Carrusel */
@@ -564,10 +547,15 @@ section {
   padding: 20px 0;
   font-size: 1.1rem;
   text-align: center;
-  border-top: 1px solid #333;
+  border-top: 2px solid #333;
   font-family: 'Playfair Display', serif;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
   z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 .social-icons {
@@ -588,12 +576,27 @@ section {
   transform: scale(1.2);
 }
 
+/* Banner promocional */
+
+
 /* Separadores Secciones */
 .separador {
   width: 60%;
   height: 2px;
   background: linear-gradient(to right, transparent, #FFD700, transparent);
   margin: 40px auto;
+}
+
+/*Animacion*/
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -682,6 +685,273 @@ section {
 .menu-toggle {
   display: none;
 }
+
+/* Logo Arriba a la izquierda */
+.logo-container {
+  position: fixed; /* Fijo para que sea visible en todas las secciones */
+  top: 20px; /* Espaciado desde la parte superior */
+  left: 20px; /* Espaciado desde el lado izquierdo */
+  z-index: 1000; /* Asegura que el logo esté encima de otros elementos */
+  width: 120px; /* Tamaño estándar para el logo */
+}
+
+/* Estilo del enlace */
+.logo-container a {
+  display: block; /* Asegura que el área de clic incluya toda la imagen */
+  text-decoration: none; /* Elimina subrayado en caso de estilos adicionales */
+}
+
+/* Imagen del logo */
+.logo-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Asegura que el logo se vea proporcionado */
+  transition: transform 0.3s ease; /* Suaviza animaciones, si las añadimos */
+}
+
+/* Efecto hover para el logo */
+.logo-container a:hover img {
+  transform: scale(1.1); /* Amplía ligeramente el logo al pasar el ratón */
+}
+
+/* Sección Sobre Nosotros */
+.sobre-nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background: transparent;
+}
+
+/* Cuadro contenedor */
+.cuadro-seccion {
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #FFD700;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Contenedor Izquierdo */
+.contenedor-izquierda {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.foto-marco img {
+  width: 100%;
+  max-width: 400px;
+  border: 5px solid #FFD700;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #FFD700;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.titulo img.logo-medio {
+  width: 50px;
+  height: auto;
+}
+
+.descripcion {
+  font-size: 1.2rem;
+  color: white;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Contenedor Derecho */
+.contenedor-derecha {
+  flex: 1 1 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Atributos */
+.atributo {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.atributo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.icono-atributo {
+  position: relative;
+  margin: 0 auto 15px;
+  width: 70px;
+  height: 70px;
+  transform: rotate(45deg);
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #FFD700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.icono-atributo img {
+  transform: rotate(-45deg);
+  width: 40px;
+  height: 40px;
+}
+
+.atributo h3 {
+  font-size: 1.5rem;
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+.atributo p {
+  font-size: 1rem;
+  color: white;
+  opacity: 0.8;
+}
+
+/* Sección Sobre Nosotros */
+.sobre-nosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px;
+  background: transparent;
+}
+
+/* Cuadro contenedor */
+.cuadro-seccion {
+  width: 95%; /* Más ancho */
+  max-width: 1400px; /* Tamaño máximo aumentado */
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid #FFD700; /* Bordes más gruesos */
+  border-radius: 20px;
+  padding: 60px; /* Espaciado interno ampliado */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Contenedor Izquierdo */
+.contenedor-izquierda {
+  flex: 1 1 45%; /* Más grande */
+  text-align: center;
+}
+
+.foto-marco img {
+  width: 100%;
+  max-width: 500px; /* Imagen más grande */
+  border: 6px solid #FFD700; /* Bordes más gruesos */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem; /* Texto más grande */
+  color: #FFD700;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.titulo img.logo-medio {
+  width: 115px; /* Logo más grande */
+  height: auto;
+}
+
+.descripcion {
+  font-size: 1.5rem; /* Texto más grande */
+  color: white;
+  text-align: justify;
+  line-height: 1.8; /* Mejora la legibilidad */
+}
+
+/* Contenedor Derecho */
+.contenedor-derecha {
+  flex: 1 1 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px; /* Más espacio entre atributos */
+}
+
+/* Atributos */
+.atributo {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  text-align: center;
+  padding: 30px; /* Más espacio interno */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.atributo:hover {
+  transform: scale(1.1); /* Efecto más pronunciado */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+.icono-atributo {
+  position: relative;
+  margin: 0 auto 20px;
+  width: 80px; /* Más grande */
+  height: 80px; /* Más grande */
+  transform: rotate(45deg);
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid #FFD700; /* Bordes más gruesos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.icono-atributo img {
+  transform: rotate(-45deg);
+  width: 50px; /* Más grande */
+  height: 50px;
+}
+
+.atributo h3 {
+  font-size: 1.8rem; /* Texto más grande */
+  color: #FFD700;
+  margin-bottom: 15px;
+}
+
+.atributo p {
+  font-size: 1.2rem; /* Texto más grande */
+  color: white;
+  opacity: 0.9;
+}
+
+
+
+
+
 
 
 
