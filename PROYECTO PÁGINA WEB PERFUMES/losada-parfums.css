@@ -1142,6 +1142,205 @@ footer {
   }   
 }
 
+/* Sección Perfumes para Él */
+#perfumes-para-el {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 3.5em; /* Tamaño más grande del texto */
+  color: rgb(139, 156, 180); /* Azul vibrante */
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Más espacio entre texto e ícono */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Sombra suave para destacar */
+}
+
+.icono-masculino {
+  width: 60px; /* Aumentar el tamaño del ícono */
+  height: auto;
+  margin: 0;
+  filter: drop-shadow(0 0 10px #9ba8b6); /* Efecto de brillo */
+  animation: pulse 2s infinite; /* Animación para hacerlo más dinámico */
+}
+
+/* Animación de pulso para el ícono */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.perfumes-grid {
+  display: flex;
+  flex-direction: column; /* Para alinearlas en columna */
+  gap: 20px; /* Más espacio entre tarjetas */
+  align-items: center; /* Centrar todo horizontalmente */
+}
+
+.perfume-item {
+  background: #1b1f24; /* Fondo más oscuro */
+  padding: 25px; /* Más espacio interno */
+  border-radius: 15px; /* Bordes más redondeados */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-start; /* Alinear al inicio */
+  gap: 20px; /* Espaciado entre los elementos */
+  max-width: 1000px; /* Ancho máximo más grande */
+  width: 90%; /* Se ajusta al ancho de la página */
+}
+
+
+.perfume-img {
+  width: 150px; /* Imagen más grande */
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.perfume-details {
+  text-align: left;
+  flex: 1;
+}
+
+.perfume-details h3 {
+  font-size: 1.8em; /* Título más grande */
+  color: #ffd700; /* Dorado vibrante */
+  margin: 0 0 10px; /* Espaciado debajo */
+}
+
+.brand {
+  font-size: 1.2em;
+  color: #add8e6; /* Azul claro */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.description {
+  font-size: 1em; /* Texto ligeramente más grande */
+  color: #ddd;
+}
+
+.notes {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0; /* Más espacio alrededor */
+}
+
+.note {
+  width: 18px; /* Tamaño ligeramente mayor */
+  height: 18px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.buttons {
+  display: flex;
+  gap: 15px; /* Más espacio entre botones */
+  justify-content: flex-start; /* Alinear al inicio */
+}
+
+.btn {
+  padding: 12px 25px; /* Más grandes */
+  font-size: 1em; /* Fuente mayor */
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px; /* Bordes más suaves */
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px); /* Efecto al pasar el cursor */
+}
+
+.btn.comprar {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #28a745, #218838);
+  border: none;
+  border-radius: 30px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.comprar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.btn.comprar:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.btn.comprar:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(45deg, #20c15e, #1e8d47);
+}
+
+.btn.saber-mas {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.saber-mas::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.btn.saber-mas:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.btn.saber-mas:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(45deg, #0056b3, #003f80);
+}
+
+
+
+
 
 
 
