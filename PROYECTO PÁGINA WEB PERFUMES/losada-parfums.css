@@ -1150,7 +1150,7 @@ footer {
 
 .section-header h2 {
   font-size: 3.5em; /* Tamaño más grande del texto */
-  color: rgb(139, 156, 180); /* Azul vibrante */
+  color: rgb(233, 236, 234); /* Blanco */
   margin-bottom: 30px;
   position: relative;
   display: flex;
@@ -1186,15 +1186,29 @@ footer {
 }
 
 .perfume-item {
-  background: #1b1f24; /* Fondo más oscuro */
-  padding: 25px; /* Más espacio interno */
-  border-radius: 15px; /* Bordes más redondeados */
+  background: #1b1f24;
+  padding: 25px;
+  border-radius: 15px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  display: grid;
+  grid-template-columns: 150px 1fr 400px; /* Espacio más grande para el video */
+  gap: 20px;
+  max-width: 1000px;
+  width: 90%;
+}
+
+.perfume-video {
   display: flex;
-  align-items: flex-start; /* Alinear al inicio */
-  gap: 20px; /* Espaciado entre los elementos */
-  max-width: 1000px; /* Ancho máximo más grande */
-  width: 90%; /* Se ajusta al ancho de la página */
+  align-items: center;
+  justify-content: center;
+}
+
+.perfume-video video {
+  width: 100%;
+  max-width: 350px; /* Ancho más grande del video */
+  height: auto;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -1290,7 +1304,7 @@ footer {
 
 .btn.comprar:hover {
   transform: translateY(-3px);
-  background: linear-gradient(45deg, #20c15e, #1e8d47);
+  background: linear-gradient(45deg, rgb(233, 236, 234), rgb(233, 236, 234));
 }
 
 .btn.saber-mas {
@@ -1299,7 +1313,7 @@ footer {
   text-decoration: none;
   font-weight: bold;
   border: 2px solid #FFD700; /* Borde amarillo */
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease; /* Transición simple */
 }
 
 .btn.saber-mas::before {
@@ -1315,13 +1329,10 @@ footer {
   transition: transform 0.5s ease;
 }
 
-.btn.saber-mas:hover::before {
-  transform: translate(-50%, -50%) scale(1);
-}
-
 .btn.saber-mas:hover {
   background-color: #FFD700; /* Fondo amarillo */
   color: black; /* Texto negro */
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5); /* Efecto de sombra suave */
 }
 
 
