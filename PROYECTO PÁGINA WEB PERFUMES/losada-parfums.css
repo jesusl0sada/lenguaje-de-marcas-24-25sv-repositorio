@@ -1150,7 +1150,7 @@ footer {
 
 .section-header h2 {
   font-size: 3.5em; /* Tamaño más grande del texto */
-  color: rgb(233, 236, 234); /* Blanco */
+  color: #ffd700; /* Amarillo */
   margin-bottom: 30px;
   position: relative;
   display: flex;
@@ -1189,7 +1189,8 @@ footer {
   background: #1b1f24;
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(30, 144, 255, 0.6);
+  transition: box-shadow 0.3s ease;
   display: grid;
   grid-template-columns: 150px 1fr 400px; /* Espacio más grande para el video */
   gap: 20px;
@@ -1204,11 +1205,16 @@ footer {
 }
 
 .perfume-video video {
-  width: 100%;
-  max-width: 350px; /* Ancho más grande del video */
+  width: 200%;
+  max-width: 400px; /* Ancho más grande del video */
   height: auto;
   border-radius: 15px; /* Bordes redondeados */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.perfume-video video:hover {
+  transform: scale(1.10);
+  transition: transform 0.3s ease;
 }
 
 
@@ -1275,12 +1281,15 @@ footer {
 }
 
 .btn.comprar {
-  background-color: #FFD700; /* Fondo amarillo/dorado */
-  color: black; /* Texto negro */
+  background-color: #FFD700; /* Amarillo dorado */
+  color: black;
   text-decoration: none;
   font-weight: bold;
-  border: 2px solid #FFD700; /* Borde del mismo color */
-  transition: background 0.3s ease, color 0.3s ease;
+  border: 2px solid #FFD700; /* Borde amarillo */
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn.comprar::before {
@@ -1308,12 +1317,15 @@ footer {
 }
 
 .btn.saber-mas {
-  background-color: black; /* Fondo negro */
-  color: #FFD700; /* Texto amarillo */
+  background-color: black; /* Negro */
+  color: #FFD700; /* Amarillo */
   text-decoration: none;
   font-weight: bold;
   border: 2px solid #FFD700; /* Borde amarillo */
-  transition: box-shadow 0.2s ease, background-color 0.2s ease; /* Transición simple */
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn.saber-mas::before {
@@ -1334,6 +1346,90 @@ footer {
   color: black; /* Texto negro */
   box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5); /* Efecto de sombra suave */
 }
+
+/* Sección Perfumes para Ella */
+#perfumes-para-ella {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#perfumes-para-ella .section-header h2 {
+  font-size: 3.5em;
+  color: #FFD700; /* Mantiene el dorado */
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+#perfumes-para-ella .icono-femenino {
+  width: 60px;
+  height: auto;
+  margin: 0;
+  filter: drop-shadow(0 0 10px #FFC0CB); /* Toque femenino con resplandor rosa */
+  animation: pulse 2s infinite;
+}
+
+/* Ajustes para diferenciar el diseño de "Para Ella" */
+#perfumes-para-ella .perfume-item {
+  background: #1b1f24; /* Mantener el fondo oscuro */
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.6); /* Brillo rosa */
+  transition: box-shadow 0.3s ease; /* Suavizar la transición del brillo */
+  display: grid;
+  grid-template-columns: 150px 1fr 400px;
+  gap: 20px;
+  max-width: 1000px;
+  width: 90%;
+}
+
+#perfumes-para-ella .perfume-details h3 {
+  font-size: 1.8em;
+  color: #ffd700;
+}
+
+#perfumes-para-ella .perfume-details .brand {
+  font-size: 1.2em;
+  color: #FFFACD;
+}
+
+#perfumes-para-ella .notes .note {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Botones */
+#perfumes-para-ella .btn.comprar {
+  background-color: #FFD700;
+  color: black;
+}
+
+#perfumes-para-ella .btn.comprar:hover {
+  background-color: #FFC107;
+}
+
+#perfumes-para-ella .btn.saber-mas {
+  background-color: black;
+  color: #FFD700;
+}
+
+#perfumes-para-ella .btn.saber-mas:hover {
+  background-color: #FFD700;
+  color: black;
+}
+
+/* Efecto Hover para ambas secciones */
+#perfumes-para-el .perfume-item:hover,
+#perfumes-para-ella .perfume-item:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); /* Brillo más intenso al pasar el cursor */
+}
+
 
 
 

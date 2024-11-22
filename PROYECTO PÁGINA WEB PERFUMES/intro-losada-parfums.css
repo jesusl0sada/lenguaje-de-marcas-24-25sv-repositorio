@@ -1,0 +1,155 @@
+/* Reset General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Fondo de la página */
+body {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Header dinámico */
+.header-dinamico {
+  position: fixed; /* Fijo en la parte superior */
+  top: 0;
+  width: 100%;
+  background-color: #FFD700; /* Fondo amarillo/dorado */
+  color: black;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  overflow: hidden; /* Para ocultar cualquier desbordamiento del texto */
+}
+
+.marquee {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden; /* Oculta contenido fuera del área visible */
+  white-space: nowrap; /* Evita que las líneas se rompan */
+}
+
+.marquee p {
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  animation: scrollText 15s linear infinite; /* Desplazamiento continuo */
+}
+
+/* Animación del texto */
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%); /* Comienza fuera del área visible a la derecha */
+  }
+  100% {
+    transform: translateX(-100%); /* Termina fuera del área visible a la izquierda */
+  }
+}
+
+/* Contenedor principal */
+.intro-container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 80px; /* Espaciado para el header dinámico */
+}
+
+/* Título decorado */
+.titulo-decorado {
+  margin-bottom: 50px;
+}
+
+.titulo-bienvenidos {
+  font-size: 5em; /* Tamaño del "Bienvenidos a" */
+  font-family: 'Playfair Display', serif;
+  color: #FFD700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.titulo-losada {
+  font-size: 5em; /* Tamaño del "Losada Parfums" */
+  font-family: 'Playfair Display', serif;
+  color: #FFD700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.logo-en-texto img {
+  width: 200px; /* Tamaño grande del logo */
+  height: auto;
+}
+
+/* Botón central */
+.boton-wrapper {
+  margin-top: 20px;
+}
+
+/* Estilo del botón principal */
+.btn-compra {
+  display: inline-block;
+  font-size: 1.5rem; /* Tamaño de fuente más grande */
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase; /* Letras en mayúscula */
+  text-decoration: none; /* Sin subrayado */
+  padding: 20px 40px; /* Más espacio interno */
+  background: linear-gradient(45deg, #FFD700, #FFC107); /* Fondo degradado dorado */
+  border: none; /* Sin borde */
+  border-radius: 50px; /* Bordes redondeados */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto hover del botón */
+.btn-compra:hover {
+  background: linear-gradient(45deg, #FFC107, #FFD700); /* Cambia el degradado */
+  transform: translateY(-3px); /* Levanta el botón al pasar el cursor */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Aumenta la sombra */
+}
+
+/* Efecto animado en hover */
+.btn-compra::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3); /* Efecto de luz suave */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-compra:hover::before {
+  width: 300%;
+  height: 300%;
+}
+
+/* Para dispositivos móviles */
+@media (max-width: 768px) {
+  .btn-compra {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+  }
+}
+
+  
