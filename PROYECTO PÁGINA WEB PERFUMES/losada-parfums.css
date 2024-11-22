@@ -746,18 +746,113 @@ section {
 
 /* Sección Sobre Nosotros */
 .sobre-nosotros {
+  padding: 50px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
-  background: transparent;
+}
+
+.sobre-nosotros-contenedor {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.sobre-nosotros-imagen img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
+}
+
+.sobre-nosotros-descripcion {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.sobre-nosotros-descripcion p {
+  margin-bottom: 30px;
+}
+
+.sobre-nosotros-atributos {
+  display: flex;
+  flex-direction: row; /* Alineación horizontal */
+  gap: 20px;
+  justify-content: center;
+}
+
+.atributo {
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.atributo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+}
+
+.atributo h3 {
+  font-size: 1.2rem;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.atributo p {
+  font-size: 1rem;
+  color: #ddd;
+  text-align: center; /* Centrar el texto */
+  margin: 0;
+}
+
+
+.icono {
+  width: 60px;
+  height: 60px;
+  background: #ffd700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  box-shadow: 0 5px 10px rgba(255, 215, 0, 0.6);
+}
+
+.icono img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Animaciones */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Cuadro contenedor */
 .cuadro-seccion {
   width: 90%;
   max-width: 1200px;
-  background: rgba(255, 255, 255, 0.1);
   border: 2px solid #FFD700;
   border-radius: 15px;
   padding: 40px;
@@ -815,7 +910,6 @@ section {
 
 /* Atributos */
 .atributo {
-  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   text-align: center;
   padding: 20px;
@@ -863,120 +957,102 @@ section {
 
 /* Sección Sobre Nosotros */
 .sobre-nosotros {
+  padding: 70px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 70px;
-  background: transparent;
+  background: inherit; /* Usa el mismo fondo que el body */
+  color: white;
 }
 
-/* Cuadro contenedor */
 .cuadro-seccion {
-  width: 95%; /* Más ancho */
-  max-width: 1400px; /* Tamaño máximo aumentado */
-  background: rgba(255, 255, 255, 0.1);
-  border: 3px solid #FFD700; /* Bordes más gruesos */
-  border-radius: 20px;
-  padding: 60px; /* Espaciado interno ampliado */
+  max-width: 1200px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+  border-radius: 15px;
+  padding: 40px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-/* Contenedor Izquierdo */
-.contenedor-izquierda {
-  flex: 1 1 45%; /* Más grande */
-  text-align: center;
-}
-
-.foto-marco img {
-  width: 100%;
-  max-width: 500px; /* Imagen más grande */
-  border: 6px solid #FFD700; /* Bordes más gruesos */
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-}
-
-.titulo {
-  font-family: 'Playfair Display', serif;
-  font-size: 5rem; /* Texto más grande */
-  color: #FFD700;
-  margin: 30px 0;
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
+  text-align: center;
+  gap: 30px;
 }
 
-.titulo img.logo-medio {
-  width: 115px; /* Logo más grande */
-  height: auto;
+/* Imagen destacada */
+.imagen-container img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  border: 3px solid #FFD700;
 }
 
+/* Descripción */
 .descripcion {
-  font-size: 1.5rem; /* Texto más grande */
-  color: white;
-  text-align: justify;
-  line-height: 1.8; /* Mejora la legibilidad */
-}
-
-/* Contenedor Derecho */
-.contenedor-derecha {
-  flex: 1 1 50%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px; /* Más espacio entre atributos */
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ddd;
+  margin-top: 20px;
 }
 
 /* Atributos */
+.atributos-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .atributo {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #FFD700;
   border-radius: 15px;
+  padding: 20px;
+  width: 200px;
   text-align: center;
-  padding: 30px; /* Más espacio interno */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
 }
 
 .atributo:hover {
-  transform: scale(1.1); /* Efecto más pronunciado */
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
+/* Icono del atributo */
 .icono-atributo {
-  position: relative;
-  margin: 0 auto 20px;
-  width: 80px; /* Más grande */
-  height: 80px; /* Más grande */
-  transform: rotate(45deg);
-  background: rgba(255, 255, 255, 0.1);
-  border: 3px solid #FFD700; /* Bordes más gruesos */
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border: 2px solid #FFD700;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .icono-atributo img {
-  transform: rotate(-45deg);
-  width: 50px; /* Más grande */
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
+/* Título del atributo */
 .atributo h3 {
-  font-size: 1.8rem; /* Texto más grande */
+  font-size: 1.5rem;
   color: #FFD700;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
+/* Texto del atributo */
 .atributo p {
-  font-size: 1.2rem; /* Texto más grande */
-  color: white;
-  opacity: 0.9;
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
 }
+
 
 /* Sección de contacto */
 .contacto {
@@ -1113,16 +1189,6 @@ footer {
 
   .destacado-item p {
     font-size: 0.9em;
-  }
-
-  .icono-atributo {
-    width: 50px;
-    height: 50px;
-  }
-
-  .icono-atributo img {
-    width: 30px;
-    height: 30px;
   }
 
   .atributo h3 {
