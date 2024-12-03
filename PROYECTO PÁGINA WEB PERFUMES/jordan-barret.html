@@ -3,100 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jordan Barret - Losada Parfums</title>
+  <title>Losada Parfums X Jordan Barret</title>
   <link rel="stylesheet" href="jordan-barret.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Logo fijo con enlace al inicio -->
+  <!-- Menú lateral e icono -->
   <div class="logo-container">
     <a href="jordan-barret.html">
       <img src="logoperfumeslosada.png" alt="Logo Losada Parfums">
     </a>
   </div>
-
-  <!-- Checkbox para activar el menú lateral -->
   <input type="checkbox" id="menu-toggle" class="menu-toggle">
-  
-  <!-- Etiqueta para el icono de hamburguesa -->
   <label for="menu-toggle" class="icono-hamburguesa">
     <span></span>
     <span></span>
     <span></span>
   </label>
-
-  <!-- Barra Lateral del Menú -->
   <aside class="barra-lateral">
-    <div class="logo-lateral">
-      <img src="logoperfumeslosada.png" alt="Logo Losada Parfums">
-    </div>
-    <nav class="menu-lateral">
+    <div class="menu-lateral">
       <ul>
-        <li><a href="losada-parfums.html">Inicio</a></li>
-        <li><a href="losada-parfums.html#sobre-nosotros">Sobre Nosotros</a></li>
-        <li><a href="losada-parfums.html#perfumes-para-el">Para Él</a></li>
-        <li><a href="losada-parfums.html#perfumes-para-ella">Para Ella</a></li>
-        <li><a href="jordan-barret.html">Jordan Barret</a></li>
-        <li><a href="losada-parfums.html#contacto">Contacto</a></li>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Sobre Nosotros</a></li>
+        <li><a href="#">Perfumes para Él</a></li>
+        <li><a href="#">Perfumes para Ella</a></li>
+        <li><a href="#">Contacto</a></li>
       </ul>
-    </nav>
+    </div>
   </aside>
 
-  <!-- Contenido Principal -->
-  <main class="jordan-barret">
-    <!-- Encabezado -->
-    <header class="header">
-      <div class="header-content">
-        <h1>Jordan Barret</h1>
-        <p>El embajador del estilo y la elegancia.</p>
-      </div>
-    </header>
+  <!-- Hero Section con vídeo -->
+  <section class="hero">
+    <video autoplay muted loop class="video-fondo">
+      <source src="video-intro-jordan-barret.mp4" type="video/mp4">
+    </video>
+    <div class="hero-text">
+      <h1>Jordan Barret</h1>
+      <p>La figura de Losada Parfums que redefine la elegancia y el estilo.</p>
+    </div>
+  </section>
 
-    <!-- Biografía -->
-    <section class="biografia">
-      <p>
-        Jordan Barret, modelo internacional y referente del estilo contemporáneo, representa la esencia de
-        Losada Parfums. Su dedicación, elegancia y autenticidad son valores que compartimos y celebramos en cada una de nuestras fragancias.
-      </p>
-    </section>
+  <section class="sobre-jordan">
+    <div class="contenido">
+      <!-- Biografía -->
+      <div class="biografia">
+        <video muted autoplay loop>
+          <source src="video-jordan-barret-2.mp4" type="video/mp4">
+        </video>
+        <p>
+          Jordan Barret, modelo internacional, embajador de estilo y elegancia. Un referente del mundo del modelaje que inspira a través de su carisma y autenticidad.
+        </p>
+      </div>
+  
+      <!-- Cualidades con logros -->
+      <div class="cualidades">
+        <!-- Elegancia -->
+        <div class="cualidad">
+          <img src="icono-elegancia.png" alt="Elegancia">
+          <h3>ELEGANCIA</h3>
+          <p>Una mezcla perfecta de sofisticación y carisma.</p>
+          <p class="metricas">5 años redefiniendo estilo.</p>
+        </div>
+  
+        <!-- Pasión -->
+        <div class="cualidad">
+          <img src="icono-pasion.png" alt="Pasión">
+          <h3>PASIÓN</h3>
+          <p>Un espíritu apasionado por la moda y el arte.</p>
+          <p class="metricas">Colaboraciones con 20 marcas globales.</p>
+        </div>
+  
+        <!-- Autenticidad -->
+        <div class="cualidad">
+          <img src="icono-autenticidad.png" alt="Autenticidad">
+          <h3>AUTENTICIDAD</h3>
+          <p>Un referente auténtico en el mundo del modelaje.</p>
+          <p class="metricas">Premio al modelo más influyente 2022.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Galería de Imágenes -->
-    <section class="galeria">
-      <h2>Galería</h2>
-      <div class="imagenes">
-        <img src="jordan1.jpg" alt="Jordan Barret 1">
-        <img src="jordan2.jpg" alt="Jordan Barret 2">
-        <img src="jordan3.jpg" alt="Jordan Barret 3">
-        <img src="jordan4.jpg" alt="Jordan Barret 4">
+  <!-- Carrusel de perfumes -->
+  <section class="jordan-choice">
+    <h2>Jordan's Choice</h2>
+    <div class="perfumes-carrusel">
+      <div class="perfume">
+        <img src="perfume1.jpg" alt="Perfume 1">
+        <h3>Perfume 1</h3>
+        <p>Descripción breve del perfume 1.</p>
       </div>
-    </section>
-
-    <!-- Características Destacadas -->
-    <section class="atributos">
-      <div class="atributo">
-        <img src="icono-elegancia.png" alt="Icono Elegancia">
-        <h3>Elegancia</h3>
-        <p>Una mezcla de sofisticación y carisma que define su esencia.</p>
+      <div class="perfume">
+        <img src="perfume2.jpg" alt="Perfume 2">
+        <h3>Perfume 2</h3>
+        <p>Descripción breve del perfume 2.</p>
       </div>
-      <div class="atributo">
-        <img src="icono-pasion.png" alt="Icono Pasión">
-        <h3>Pasión</h3>
-        <p>Impulsado por la moda y el arte, su pasión no tiene límites.</p>
+      <div class="perfume">
+        <img src="perfume3.jpg" alt="Perfume 3">
+        <h3>Perfume 3</h3>
+        <p>Descripción breve del perfume 3.</p>
       </div>
-      <div class="atributo">
-        <img src="icono-autenticidad.png" alt="Icono Autenticidad">
-        <h3>Autenticidad</h3>
-        <p>Auténtico en cada paso de su carrera y vida personal.</p>
-      </div>
-    </section>
-
-    <!-- Video -->
-    <section class="video">
-      <h2>Un Mensaje Visual</h2>
-      <video autoplay muted loop>
-        <source src="jordan-barret-video.mp4" type="video/mp4">
-      </video>
-    </section>
-  </main>
+    </div>
+  </section>
 </body>
 </html>
