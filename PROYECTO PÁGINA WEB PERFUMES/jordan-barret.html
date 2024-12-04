@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Losada Parfums X Jordan Barret</title>
   <link rel="stylesheet" href="jordan-barret.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
@@ -14,47 +14,62 @@
       <img src="logoperfumeslosada.png" alt="Logo Losada Parfums">
     </a>
   </div>
+  
   <input type="checkbox" id="menu-toggle" class="menu-toggle">
   <label for="menu-toggle" class="icono-hamburguesa">
     <span></span>
     <span></span>
     <span></span>
   </label>
+  
   <aside class="barra-lateral">
+    <div class="logo-lateral">
+      <img src="logoperfumeslosada.png" alt="Logo Losada Parfums">
+    </div>
     <div class="menu-lateral">
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Sobre Nosotros</a></li>
-        <li><a href="#">Perfumes para Él</a></li>
-        <li><a href="#">Perfumes para Ella</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="losada-parfums.html">Inicio</a></li>
+        <li><a href="losada-parfums.html#sobre-nosotros">Sobre Nosotros</a></li>
+        <li><a href="losada-parfums.html#perfumes-para-el">Para Él</a></li>
+        <li><a href="losada-parfums.html#perfumes-para-ella">Para Ella</a></li>
+        <li><a href="jordan-barret.html">Jordan Barret</a></li>
+        <li><a href="losada-parfums.html#contacto">Contacto</a></li>
       </ul>
     </div>
   </aside>
-
-  <!-- Hero Section con vídeo -->
+  
+  <!-- Hero Section con vídeo y flecha animada -->
   <section class="hero">
     <video autoplay muted loop class="video-fondo">
       <source src="video-intro-jordan-barret.mp4" type="video/mp4">
+      Tu navegador no soporta la etiqueta de video.
     </video>
     <div class="hero-text">
       <h1>Jordan Barret</h1>
       <p>La figura de Losada Parfums que redefine la elegancia y el estilo.</p>
     </div>
+    <!-- Flecha Animada -->
+    <div class="scroll-down">
+      <a href="#sobre-jordan">
+        <div class="arrow"></div>
+      </a>
+    </div>
   </section>
 
-  <section class="sobre-jordan">
+  <!-- Sección Sobre Jordan -->
+  <section class="sobre-jordan" id="sobre-jordan">
     <div class="contenido">
       <!-- Biografía -->
       <div class="biografia">
-        <video muted autoplay loop>
+        <video muted autoplay loop class="biografia-video">
           <source src="video-jordan-barret-2.mp4" type="video/mp4">
+          Tu navegador no soporta la etiqueta de video.
         </video>
         <p>
           Jordan Barret, modelo internacional, embajador de estilo y elegancia. Un referente del mundo del modelaje que inspira a través de su carisma y autenticidad.
         </p>
       </div>
-  
+
       <!-- Cualidades con logros -->
       <div class="cualidades">
         <!-- Elegancia -->
@@ -64,7 +79,7 @@
           <p>Una mezcla perfecta de sofisticación y carisma.</p>
           <p class="metricas">5 años redefiniendo estilo.</p>
         </div>
-  
+
         <!-- Pasión -->
         <div class="cualidad">
           <img src="icono-pasion.png" alt="Pasión">
@@ -72,7 +87,7 @@
           <p>Un espíritu apasionado por la moda y el arte.</p>
           <p class="metricas">Colaboraciones con 20 marcas globales.</p>
         </div>
-  
+
         <!-- Autenticidad -->
         <div class="cualidad">
           <img src="icono-autenticidad.png" alt="Autenticidad">
