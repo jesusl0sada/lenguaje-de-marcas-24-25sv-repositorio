@@ -8,11 +8,10 @@
 
 /* Desplazamiento suave */
 html {
-  scroll-behavior: smooth; /* Activa el desplazamiento suave */
+  scroll-behavior: smooth;
 }
 
-
-/* Fondo de la página con negro y toques azules */
+/* Fondo de la página */
 body {
   background: radial-gradient(circle, rgba(0, 0, 0, 1), rgba(10, 10, 20, 1)),
               radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1), transparent 80%),
@@ -31,7 +30,7 @@ main {
   text-align: center;
 }
 
-/* Estilos del título con logo en el centro */
+/* Título decorado */
 .titulo-decorado {
   display: flex;
   align-items: center;
@@ -47,45 +46,7 @@ main {
 }
 
 .titulo-animado {
-  font-size: 8.5em; /* Tamaño aumentado */
-  font-family: 'Playfair Display', serif;
-  color: #FFD700;
-  background: linear-gradient(to right, #FFD700, #ffcc66);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: slideInFromLeft 1.5s ease-out forwards;
-  text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.6); /* Ajustado para un efecto más definido */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px; /* Más espacio entre elementos */
-}
-
-/* Animación para el título */
-@keyframes slideInFromLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Estilizar y animar el título */
-.titulo-animado {
-  font-size: 7em; /* Tamaño del título */
+  font-size: 7em;
   font-family: 'Playfair Display', serif;
   color: #FFD700;
   background: linear-gradient(to right, #FFD700, #ffcc66);
@@ -100,121 +61,33 @@ main {
   gap: 15px;
 }
 
-/* Animación decorativa para el logo en el título */
-.logo-en-texto img {
-  width: 120px;
-  height: auto;
-  vertical-align: middle;
-  margin: 0 10px;
-  animation: fadeIn 2s ease-in-out forwards;
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-/* Detalles decorativos del eslogan */
+.logo-en-texto img {
+  width: 140px;
+  height: auto;
+  vertical-align: middle;
+  margin: 0 15px;
+}
+
 .slogan-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 40px;
-  animation: fadeIn 2s ease-in-out forwards;
 }
 
 .slogan {
-  animation: fadeInZoom 1.5s ease-out forwards;
-}
-
-@keyframes fadeInZoom {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.slogan {
-  font-size: 2em;
-  font-family: 'Playfair Display', serif;
-  color: #FFD700;
-  font-style: italic;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-  padding: 15px 0;
-  position: relative;
-}
-
-.slogan::before,
-.slogan::after {
-  content: "";
-  position: absolute;
-  width: 80px;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #FFD700, transparent);
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.slogan::before {
-  left: -90px;
-}
-
-.slogan::after {
-  right: -90px;
-}
-
-/* Línea decorativa animada debajo del eslogan */
-.decorative-line {
-  width: 200px;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #FFD700, transparent);
-  margin-top: 5px;
-  animation: fadeIn 2s ease-in-out forwards;
-}
-
-/* Elementos decorativos adicionales */
-.decorative-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 15px;
-}
-
-.decorative-dots span {
-  width: 10px;
-  height: 10px;
-  background-color: #FFD700;
-  border-radius: 50%;
-  animation: fadeIn 2s ease-in-out forwards;
-}
-
-.decorative-dots span:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.decorative-dots span:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-.decorative-dots span:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-
-.logo-en-texto img {
-  width: 140px; /* Tamaño aumentado para equilibrar el título */
-  height: auto;
-  vertical-align: middle;
-  margin: 0 15px; /* Espaciado más amplio */
-  animation: fadeIn 2s ease-in-out forwards;
-}
-
-/* Eslogan */
-.slogan-container {
-  margin-bottom: 40px;
-}
-
-.slogan {
-  font-size: 2.5em; /* Tamaño aumentado */
+  font-size: 2.5em;
   font-family: 'Playfair Display', serif;
   color: #FFD700;
   font-style: italic;
@@ -227,7 +100,7 @@ main {
 .slogan::after {
   content: "";
   position: absolute;
-  width: 100px; /* Ancho aumentado */
+  width: 100px;
   height: 2px;
   background: linear-gradient(to right, transparent, #FFD700, transparent);
   top: 50%;
@@ -235,61 +108,19 @@ main {
 }
 
 .slogan::before {
-  left: -110px; /* Posición aumentada */
+  left: -110px;
 }
 
 .slogan::after {
-  right: -110px; /* Posición aumentada */
+  right: -110px;
 }
 
-/* Línea decorativa animada debajo del eslogan */
 .decorative-line {
-  width: 300px; /* Ancho aumentado */
+  width: 300px;
   height: 2px;
   background: linear-gradient(to right, transparent, #FFD700, transparent);
   margin-top: 5px;
-  animation: fadeIn 2s ease-in-out forwards;
 }
-
-/* Elementos decorativos adicionales */
-.decorative-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 15px;
-}
-
-.decorative-dots span {
-  width: 15px; /* Tamaño aumentado */
-  height: 15px;
-  background-color: #FFD700;
-  border-radius: 50%;
-  animation: fadeIn 2s ease-in-out forwards;
-}
-
-.decorative-dots span:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.decorative-dots span:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-.decorative-dots span:nth-child(3) {
-  animation-delay: 0.6s;
-} 
-
-/* Animaciones */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
 
 /* Botones de inicio */
 .botones-inicio {
@@ -319,12 +150,6 @@ main {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.boton:hover {
-  background-color: #FFBF00;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .boton:hover {
@@ -371,35 +196,28 @@ main {
 }
 
 .carousel-slide:nth-child(1) {
-  animation: carouselAnimation 36s infinite; /* 6 slides x 6s por slide */
+  animation: carouselAnimation 36s infinite;
 }
-
 .carousel-slide:nth-child(2) {
   animation: carouselAnimation 36s infinite 6s;
 }
-
 .carousel-slide:nth-child(3) {
   animation: carouselAnimation 36s infinite 12s;
 }
-
 .carousel-slide:nth-child(4) {
   animation: carouselAnimation 36s infinite 18s;
 }
-
 .carousel-slide:nth-child(5) {
   animation: carouselAnimation 36s infinite 24s;
 }
-
 .carousel-slide:nth-child(6) {
   animation: carouselAnimation 36s infinite 30s;
 }
 
-
 @keyframes carouselAnimation {
-  0%, 16.66% { opacity: 1; }   /* Slide activo */
-  20%, 100% { opacity: 0; }    /* Otros slides */
+  0%, 16.66% { opacity: 1; }
+  20%, 100% { opacity: 0; }
 }
-
 
 .carousel img {
   width: 100%;
@@ -418,8 +236,6 @@ main {
   text-shadow: 1px 1px 10px rgb(0, 0, 0);
 }
 
-/* Progreso Carrusel */
-
 .carousel .carousel-progress {
   animation: progressBar 36s linear infinite;
   position: absolute;
@@ -427,8 +243,7 @@ main {
   left: 0;
   height: 5px;
   background-color: #FFD700;
-  animation: progressBar 16s linear infinite;
-  width: 0%; /* Inicia en 0% */
+  width: 0%;
 }
 
 @keyframes progressBar {
@@ -436,24 +251,21 @@ main {
   100% { width: 100%; }
 }
 
-/* Ajuste general para secciones */
 section {
-  width: 100%; /* Asegura que la sección ocupe el ancho completo de la página */
-  max-width: 1200px; /* Limita el ancho máximo para mantener el diseño */
-  margin: 0 auto; /* Centra la sección horizontalmente */
-  padding: 20px; /* Espaciado interno uniforme */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Destacados */
 .destacados {
-  width: 100%; /* Conservamos el ajuste responsivo */
   margin: 50px auto;
-  padding: 30px 20px; /* Espaciado interno */
+  padding: 30px 20px;
   color: white;
-  box-shadow: none; /* Eliminamos la sombra */
   text-align: center;
-  background: none; /* Sin fondo */
-  border-radius: 0; /* Eliminamos bordes redondeados */
+  background: none;
+  border-radius: 0;
 }
 
 .destacados-titulo {
@@ -465,15 +277,15 @@ section {
 
 .destacados-grid {
   display: flex;
-  flex-wrap: wrap; /* Permite ajuste en pantallas pequeñas */
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  margin: 0 auto; /* Centra los elementos */
-  max-width: 1200px; /* Limita el ancho interno */
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .destacado-item {
-  flex: 1 1 30%; /* Ajusta el tamaño de los elementos */
+  flex: 1 1 30%;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 15px;
@@ -492,7 +304,6 @@ section {
   border-radius: 10px;
 }
 
-
 .nombre-fragancia {
   font-size: 1.5em;
   color: #FFD700;
@@ -506,14 +317,12 @@ section {
 
 /* Testimonios */
 .testimonios {
-  width: 100%; /* Conservamos el ajuste responsivo */
   margin: 50px auto;
-  padding: 30px 20px; /* Espaciado interno */
+  padding: 30px 20px;
   color: white;
   text-align: center;
-  box-shadow: none; /* Eliminamos la sombra */
-  background: none; /* Sin fondo */
-  border-radius: 0; /* Eliminamos bordes redondeados */
+  background: none;
+  border-radius: 0;
 }
 
 .testimonios-titulo {
@@ -527,8 +336,8 @@ section {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  margin: 0 auto; /* Centra los elementos */
-  max-width: 1200px; /* Limita el ancho interno */
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .testimonio-item {
@@ -544,10 +353,10 @@ section {
 
 /* Footer */
 .footer {
-  position: fixed; /* Lo fija en la parte inferior */
-  bottom: 0; /* Asegura que esté pegado al final */
+  position: fixed;
+  bottom: 0;
   left: 0;
-  width: 100%; /* Ocupa todo el ancho de la página */
+  width: 100%;
   background-color: #1b1f24;
   color: #ffffff;
   padding: 20px 0;
@@ -556,7 +365,7 @@ section {
   border-top: 2px solid #333;
   font-family: 'Playfair Display', serif;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  z-index: 1000;
 }
 
 .footer a:hover {
@@ -582,10 +391,7 @@ section {
   transform: scale(1.2);
 }
 
-/* Banner promocional */
-
-
-/* Separadores Secciones */
+/* Separador */
 .separador {
   width: 60%;
   height: 2px;
@@ -593,54 +399,38 @@ section {
   margin: 40px auto;
 }
 
-/*Animacion*/
-.section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.5s ease-out;
-}
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
 /* Barra lateral */
 .barra-lateral {
-  position: fixed; /* Fija la barra lateral */
-  top: 0; /* Alinea la barra en la parte superior */
-  right: -250px; /* Fuera del viewport inicialmente */
+  position: fixed;
+  top: 0;
+  right: -250px;
   width: 250px;
   height: 100vh;
-  background-color: rgba(27, 31, 36, 0.95); /* Fondo semitransparente */
-  transition: right 0.3s ease; /* Transición suave al mostrar la barra */
+  background-color: rgba(27, 31, 36, 0.95);
+  transition: right 0.3s ease;
   padding: 20px 0;
-  z-index: 1000; /* Asegura que esté encima de otros elementos */
+  z-index: 1000;
 }
 
-/* Mostrar la barra lateral al activar el checkbox */
 .menu-toggle:checked ~ .barra-lateral {
-  right: 0; /* Muestra la barra al activar el menú */
+  right: 0;
 }
 
-/* Logo de la barra lateral */
 .logo-lateral img {
-  width: 80%; /* Ajusta el tamaño del logo */
+  width: 80%;
   height: auto;
   display: block;
-  margin: 0 auto; /* Centra el logo horizontalmente */
-  max-width: 120px; /* Tamaño máximo para evitar desbordes */
+  margin: 0 auto;
+  max-width: 120px;
 }
 
-/* Menú dentro de la barra lateral */
 .menu-lateral ul {
   list-style: none;
   padding: 0;
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Espaciado entre elementos */
+  gap: 15px;
 }
 
 .menu-lateral ul li a {
@@ -653,7 +443,7 @@ section {
 }
 
 .menu-lateral ul li a:hover {
-  color: #FFFFFF; /* Color al pasar el cursor */
+  color: #FFFFFF;
 }
 
 /* Icono de hamburguesa */
@@ -678,73 +468,36 @@ section {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Mantener el icono de hamburguesa estático, sin transformación */
-.menu-toggle:checked ~ .icono-hamburguesa span {
-  transform: none;
-  opacity: 1;
-}
-
-/* Ajustar la barra lateral */
-.barra-lateral {
-  position: fixed;
-  top: 0;
-  right: -250px;
-  width: 250px;
-  height: 100vh;
-  background-color: rgba(27, 31, 36, 0.9);
-  transition: right 0.3s ease;
-  padding: 20px 0;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-/* Opciones centradas */
-.menu-lateral ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  text-align: center;
-}
-
-/* Ocultar el checkbox */
 .menu-toggle {
   display: none;
 }
 
 /* Logo Arriba a la izquierda */
 .logo-container {
-  position: fixed; /* Fijo para que sea visible en todas las secciones */
-  top: 20px; /* Espaciado desde la parte superior */
-  left: 20px; /* Espaciado desde el lado izquierdo */
-  z-index: 1000; /* Asegura que el logo esté encima de otros elementos */
-  width: 120px; /* Tamaño estándar para el logo */
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  width: 120px;
 }
 
-/* Estilo del enlace */
 .logo-container a {
-  display: block; /* Asegura que el área de clic incluya toda la imagen */
-  text-decoration: none; /* Elimina subrayado en caso de estilos adicionales */
+  display: block;
+  text-decoration: none;
 }
 
-/* Imagen del logo */
 .logo-container img {
   width: 100%;
   height: auto;
-  object-fit: contain; /* Asegura que el logo se vea proporcionado */
-  transition: transform 0.3s ease; /* Suaviza animaciones, si las añadimos */
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-/* Efecto hover para el logo */
 .logo-container a:hover img {
-  transform: scale(1.1); /* Amplía ligeramente el logo al pasar el ratón */
+  transform: scale(1.1);
 }
 
-/* Sección Sobre Nosotros */
+/* Sobre Nosotros */
 .sobre-nosotros {
   padding: 50px 20px;
   display: flex;
@@ -780,7 +533,7 @@ section {
 
 .sobre-nosotros-atributos {
   display: flex;
-  flex-direction: row; /* Alineación horizontal */
+  flex-direction: row;
   gap: 20px;
   justify-content: center;
 }
@@ -797,7 +550,6 @@ section {
   align-items: center;
 }
 
-
 .atributo:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
@@ -812,10 +564,8 @@ section {
 .atributo p {
   font-size: 1rem;
   color: #ddd;
-  text-align: center; /* Centrar el texto */
   margin: 0;
 }
-
 
 .icono {
   width: 60px;
@@ -834,225 +584,170 @@ section {
   height: 40px;
 }
 
-/* Animaciones */
-@keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-  100% {
+/* SECCIÓN PERFUMES (APLICADO IGUAL A "PARA ÉL" Y "PARA ELLA") */
+.section-header h2 {
+  font-size: 3.5em;
+  color: #ffd700;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.icono-masculino,
+.icono-femenino {
+  width: 60px;
+  height: auto;
+  margin: 0;
+  /* Mismo efecto para ambos íconos, sin diferencias */
+  filter: drop-shadow(0 0 10px #9ba8b6);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
     transform: scale(1);
   }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
-/* Cuadro contenedor */
-.cuadro-seccion {
-  width: 90%;
-  max-width: 1200px;
-  border: 2px solid #FFD700;
-  border-radius: 15px;
-  padding: 40px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-/* Contenedor Izquierdo */
-.contenedor-izquierda {
-  flex: 1 1 40%;
+#perfumes-para-el,
+#perfumes-para-ella {
+  padding: 50px 20px;
   text-align: center;
 }
 
-.foto-marco img {
-  width: 100%;
-  max-width: 400px;
-  border: 5px solid #FFD700;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.titulo {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  color: #FFD700;
-  margin: 20px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.titulo img.logo-medio {
-  width: 50px;
-  height: auto;
-}
-
-.descripcion {
-  font-size: 1.2rem;
-  color: white;
-  text-align: justify;
-  line-height: 1.6;
-}
-
-/* Contenedor Derecho */
-.contenedor-derecha {
-  flex: 1 1 50%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-/* Atributos */
-.atributo {
-  border-radius: 10px;
-  text-align: center;
-  padding: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-}
-
-.atributo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.icono-atributo {
-  position: relative;
-  margin: 0 auto 15px;
-  width: 70px;
-  height: 70px;
-  transform: rotate(45deg);
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid #FFD700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.icono-atributo img {
-  transform: rotate(-45deg);
-  width: 40px;
-  height: 40px;
-}
-
-.atributo h3 {
-  font-size: 1.5rem;
-  color: #FFD700;
-  margin-bottom: 10px;
-}
-
-.atributo p {
-  font-size: 1rem;
-  color: white;
-  opacity: 0.8;
-}
-
-/* Sección Sobre Nosotros */
-.sobre-nosotros {
-  padding: 70px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: inherit; /* Usa el mismo fondo que el body */
-  color: white;
-}
-
-.cuadro-seccion {
-  max-width: 1200px;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
-  border-radius: 15px;
-  padding: 40px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+.perfumes-grid {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 30px;
-}
-
-/* Imagen destacada */
-.imagen-container img {
-  width: 100%;
-  max-width: 800px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  border: 3px solid #FFD700;
-}
-
-/* Descripción */
-.descripcion {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #ddd;
-  margin-top: 20px;
-}
-
-/* Atributos */
-.atributos-container {
-  display: flex;
-  justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
-.atributo {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid #FFD700;
+.perfume-item {
+  background: #1b1f24;
+  padding: 25px;
   border-radius: 15px;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6); /* Sombra dorada */
+  transition: box-shadow 0.3s ease;
+  display: grid;
+  grid-template-columns: 150px 1fr 400px;
+  gap: 20px;
+  max-width: 1000px;
+  width: 90%;
 }
 
-.atributo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+.perfume-item:hover {
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.8); /* Sombra dorada más intensa al pasar el ratón */
 }
 
-/* Icono del atributo */
-.icono-atributo {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 15px;
+.perfume-video {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  border: 2px solid #FFD700;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-.icono-atributo img {
-  width: 40px;
-  height: 40px;
+.perfume-video video {
+  width: 200%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
 }
 
-/* Título del atributo */
-.atributo h3 {
-  font-size: 1.5rem;
-  color: #FFD700;
+.perfume-video video:hover {
+  transform: scale(1.10);
+}
+
+.perfume-img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.perfume-details {
+  text-align: left;
+  flex: 1;
+}
+
+.perfume-details h3 {
+  font-size: 1.8em;
+  color: #ffd700;
+  margin: 0 0 10px;
+}
+
+.brand {
+  font-size: 1.2em;
+  color: #add8e6;
   margin-bottom: 10px;
 }
 
-/* Texto del atributo */
-.atributo p {
-  font-size: 1rem;
+.description {
+  font-size: 1em;
   color: #ddd;
-  line-height: 1.6;
 }
 
+.notes {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.note {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.btn {
+  padding: 12px 25px;
+  font-size: 1em;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s ease, background 0.3s ease;
+  font-weight: bold;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn.comprar {
+  background-color: #FFD700;
+  color: black;
+  border: 2px solid #FFD700;
+}
+
+.btn.comprar:hover {
+  background-color: #FFC107;
+  color: black;
+}
+
+.btn.saber-mas {
+  background-color: black;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+}
+
+.btn.saber-mas:hover {
+  background-color: #FFD700;
+  color: black;
+}
 
 /* Sección de contacto */
 .contacto {
@@ -1065,7 +760,6 @@ section {
   color: white;
 }
 
-/* Contenedor principal */
 .contacto-contenedor {
   display: flex;
   justify-content: space-between;
@@ -1159,36 +853,141 @@ section {
 
 .info-contacto p {
   margin-bottom: 10px;
-}   
-
-/* Pie de página */
-footer {
-  background-color: #1b1f24;
-  color: white;
-  text-align: center;
-  padding: 20px;
 }
 
-/* Estilos para dispositivos pequeños */
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-  .titulo {
-    font-size: 3.5em;
-  }
-
-  .destacados-titulo {
-    font-size: 2em;
-  }
-
-  .destacado-item {
+  body {
+    overflow-x: hidden;
+    font-size: 14px;
     padding: 10px;
   }
 
-  .destacado-item h3 {
-    font-size: 1.2em;
+  img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 
-  .destacado-item p {
-    font-size: 0.9em;
+  /* Logo arriba a la izquierda más grande en móvil */
+  .logo-container {
+    top: 10px;
+    left: 10px;
+  }
+
+  .logo-container img {
+    width: 80px; /* Aumentado de 60px a 80px */
+    height: auto;
+  }
+
+  .titulo-decorado {
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* Título principal en 3em para no salirse, manteniendo proporción */
+  .titulo-animado {
+    font-size: 3em;
+    line-height: 1.1;
+    margin: 0;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.7);
+  }
+
+  /* Logo central del título aún más grande */
+  .logo-en-texto img {
+    width: 250px; /* Aumentado de 200px a 250px */
+    height: auto;
+  }
+
+  .slogan {
+    font-size: 1.2em;
+    padding: 10px 0;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .botones-inicio {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .boton-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .boton {
+    font-size: 1em;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    border-radius: 30px;
+  }
+
+  .destacados-grid, .testimonios-slider {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+  }
+
+  .destacado-item, .testimonio-item {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .destacados-titulo,
+  .testimonios-titulo,
+  .section-header h2 {
+    font-size: 2em;
+    text-align: center;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  .sobre-nosotros-contenedor {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .sobre-nosotros-imagen img {
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  .sobre-nosotros-descripcion p {
+    font-size: 1em;
+    line-height: 1.4;
+    padding: 0 10px;
+    margin: 0 auto;
+    max-width: 300px;
+  }
+
+  .sobre-nosotros-atributos {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto;
+  }
+
+  .atributo {
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .atributo h3 {
@@ -1199,326 +998,167 @@ footer {
     font-size: 0.9em;
   }
 
-  .cuadro-seccion {  
-    padding: 20px;
+  .perfumes-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 0 auto;
   }
 
-  .cuadro-seccion h1 {
+  .perfume-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .perfume-img {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+
+  .perfume-details h3 {
+    font-size: 1.2em;
+  }
+
+  .brand {
+    font-size: 1em;
+  }
+
+  .description {
+    font-size: 0.9em;
+    line-height: 1.4;
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .notes {
+    justify-content: center;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn {
+    font-size: 1em;
+    padding: 8px 15px;
+    margin: 5px 0;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+  }
+
+  .perfume-video {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 10px auto 0;
+    text-align: center;
+  }
+
+  .perfume-video video {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    font-size: 0.9em;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .footer p {
+    font-size: 0.9em;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .social-icons img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contacto-contenedor {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .formulario-contacto {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .formulario-contacto h2 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    font-size: 1.1em;
+  }
+
+  .social-media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .social-media h2 {
+    width: 100%;
+    text-align: center;
     font-size: 2em;
-  }   
-}
-
-/* Sección Perfumes para Él */
-#perfumes-para-el {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.section-header h2 {
-  font-size: 3.5em; /* Tamaño más grande del texto */
-  color: #ffd700; /* Amarillo */
-  margin-bottom: 30px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px; /* Más espacio entre texto e ícono */
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Sombra suave para destacar */
-}
-
-.icono-masculino {
-  width: 60px; /* Aumentar el tamaño del ícono */
-  height: auto;
-  margin: 0;
-  filter: drop-shadow(0 0 10px #9ba8b6); /* Efecto de brillo */
-  animation: pulse 2s infinite; /* Animación para hacerlo más dinámico */
-}
-
-/* Animación de pulso para el ícono */
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
   }
-  50% {
+
+  .social-media a {
+    font-size: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .social-media a:hover {
     transform: scale(1.1);
   }
+
+  .social-media a img {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    filter: brightness(0) invert(1);
+  }
+
+  .info-contacto {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .info-contacto p {
+    margin-bottom: 5px;
+  }
 }
-
-.perfumes-grid {
-  display: flex;
-  flex-direction: column; /* Para alinearlas en columna */
-  gap: 20px; /* Más espacio entre tarjetas */
-  align-items: center; /* Centrar todo horizontalmente */
-}
-
-.perfume-item {
-  background: #1b1f24;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(30, 144, 255, 0.6);
-  transition: box-shadow 0.3s ease;
-  display: grid;
-  grid-template-columns: 150px 1fr 400px; /* Espacio más grande para el video */
-  gap: 20px;
-  max-width: 1000px;
-  width: 90%;
-}
-
-.perfume-video {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.perfume-video video {
-  width: 200%;
-  max-width: 400px; /* Ancho más grande del video */
-  height: auto;
-  border-radius: 15px; /* Bordes redondeados */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-.perfume-video video:hover {
-  transform: scale(1.10);
-  transition: transform 0.3s ease;
-}
-
-
-.perfume-img {
-  width: 150px; /* Imagen más grande */
-  height: auto;
-  border-radius: 10px;
-}
-
-
-.perfume-details {
-  text-align: left;
-  flex: 1;
-}
-
-.perfume-details h3 {
-  font-size: 1.8em; /* Título más grande */
-  color: #ffd700; /* Dorado vibrante */
-  margin: 0 0 10px; /* Espaciado debajo */
-}
-
-.brand {
-  font-size: 1.2em;
-  color: #add8e6; /* Azul claro */
-  margin-bottom: 10px; /* Espaciado inferior */
-}
-
-.description {
-  font-size: 1em; /* Texto ligeramente más grande */
-  color: #ddd;
-}
-
-.notes {
-  display: flex;
-  gap: 10px;
-  margin: 15px 0; /* Más espacio alrededor */
-}
-
-.note {
-  width: 18px; /* Tamaño ligeramente mayor */
-  height: 18px;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.buttons {
-  display: flex;
-  gap: 15px; /* Más espacio entre botones */
-  justify-content: flex-start; /* Alinear al inicio */
-}
-
-.btn {
-  padding: 12px 25px; /* Más grandes */
-  font-size: 1em; /* Fuente mayor */
-  border: none;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 8px; /* Bordes más suaves */
-  transition: transform 0.2s ease, background 0.3s ease;
-}
-
-.btn:hover {
-  transform: translateY(-3px); /* Efecto al pasar el cursor */
-}
-
-.btn.comprar {
-  background-color: #FFD700; /* Amarillo dorado */
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  border: 2px solid #FFD700; /* Borde amarillo */
-  padding: 10px 20px;
-  font-size: 1.2em;
-  border-radius: 5px;
-  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn.comprar::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: rgba(255, 255, 255, 0.1);
-  transform: translate(-50%, -50%) scale(0);
-  border-radius: 50%;
-  transition: transform 0.5s ease;
-}
-
-.btn.comprar:hover {
-  background-color: #FFC107; /* Tono dorado más oscuro */
-  color: black; /* Texto permanece negro */
-}
-
-
-.btn.comprar:hover {
-  transform: translateY(-3px);
-  background: linear-gradient(45deg, rgb(233, 236, 234), rgb(233, 236, 234));
-}
-
-.btn.saber-mas {
-  background-color: black; /* Negro */
-  color: #FFD700; /* Amarillo */
-  text-decoration: none;
-  font-weight: bold;
-  border: 2px solid #FFD700; /* Borde amarillo */
-  padding: 10px 20px;
-  font-size: 1.2em;
-  border-radius: 5px;
-  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn.saber-mas::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background: rgba(255, 255, 255, 0.1);
-  transform: translate(-50%, -50%) scale(0);
-  border-radius: 50%;
-  transition: transform 0.5s ease;
-}
-
-.btn.saber-mas:hover {
-  background-color: #FFD700; /* Fondo amarillo */
-  color: black; /* Texto negro */
-  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5); /* Efecto de sombra suave */
-}
-
-/* Sección Perfumes para Ella */
-#perfumes-para-ella {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-#perfumes-para-ella .section-header h2 {
-  font-size: 3.5em;
-  color: #FFD700; /* Mantiene el dorado */
-  margin-bottom: 30px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-}
-
-#perfumes-para-ella .icono-femenino {
-  width: 60px;
-  height: auto;
-  margin: 0;
-  filter: drop-shadow(0 0 10px #FFC0CB); /* Toque femenino con resplandor rosa */
-  animation: pulse 2s infinite;
-}
-
-/* Ajustes para diferenciar el diseño de "Para Ella" */
-#perfumes-para-ella .perfume-item {
-  background: #1b1f24; /* Mantener el fondo oscuro */
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(255, 105, 180, 0.6); /* Brillo rosa */
-  transition: box-shadow 0.3s ease; /* Suavizar la transición del brillo */
-  display: grid;
-  grid-template-columns: 150px 1fr 400px;
-  gap: 20px;
-  max-width: 1000px;
-  width: 90%;
-}
-
-#perfumes-para-ella .perfume-details h3 {
-  font-size: 1.8em;
-  color: #ffd700;
-}
-
-#perfumes-para-ella .perfume-details .brand {
-  font-size: 1.2em;
-  color: #FFFACD;
-}
-
-#perfumes-para-ella .notes .note {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* Botones */
-#perfumes-para-ella .btn.comprar {
-  background-color: #FFD700;
-  color: black;
-}
-
-#perfumes-para-ella .btn.comprar:hover {
-  background-color: #FFC107;
-}
-
-#perfumes-para-ella .btn.saber-mas {
-  background-color: black;
-  color: #FFD700;
-}
-
-#perfumes-para-ella .btn.saber-mas:hover {
-  background-color: #FFD700;
-  color: black;
-}
-
-/* Efecto Hover para ambas secciones */
-#perfumes-para-el .perfume-item:hover,
-#perfumes-para-ella .perfume-item:hover {
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); /* Brillo más intenso al pasar el cursor */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

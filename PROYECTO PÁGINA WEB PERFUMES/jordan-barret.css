@@ -418,3 +418,78 @@ body {
     font-size: 1.2em;
   }
 }
+
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-text p {
+    font-size: 1.2em;
+  }
+
+  .cualidad {
+    flex: 1 1 100%; /* Las cualidades una sobre otra */
+    max-width: none;
+  }
+
+  .cualidad img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cualidad h3 {
+    font-size: 1.5em;
+  }
+
+  .cualidad p {
+    font-size: 1em;
+  }
+
+  /* Perfume cards en una sola columna */
+  .perfumes-carrusel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .perfume-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .perfume-info h3 {
+    font-size: 1.2em;
+  }
+
+  .perfume-info p {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2em;
+  }
+
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  .biografia p {
+    font-size: 1em;
+  }
+
+  .cualidad img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cualidad h3 {
+    font-size: 1.2em;
+  }
+
+  .perfume-info h3 {
+    font-size: 1em;
+  }
+}
+

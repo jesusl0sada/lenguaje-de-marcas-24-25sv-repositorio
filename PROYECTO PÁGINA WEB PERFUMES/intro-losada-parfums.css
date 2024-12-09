@@ -146,10 +146,44 @@ body {
 
 /* Para dispositivos móviles */
 @media (max-width: 768px) {
+  .titulo-bienvenidos, .titulo-losada {
+    font-size: 3em; /* Reducir un poco en tablet */
+  }
+
+  .logo-en-texto img {
+    width: 120px; 
+  }
+
   .btn-compra {
     font-size: 1.2rem;
     padding: 15px 30px;
   }
 }
+
+/* Para pantallas muy pequeñas, por ejemplo móviles < 480px */
+@media (max-width: 480px) {
+  .titulo-bienvenidos, .titulo-losada {
+    font-size: 2em; /* Títulos más pequeños en móviles muy pequeños */
+  }
+
+  .logo-en-texto img {
+    width: 80px; /* Logo más pequeño */
+  }
+
+  .btn-compra {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 30px; 
+  }
+
+  body {
+    padding: 20px; /* Añadir un pequeño padding al body para que no quede todo tan pegado */
+  }
+
+  .intro-container {
+    margin-top: 120px; /* Ajustar para que se vea bien tras el header dinámico */
+  }
+}
+
 
   
